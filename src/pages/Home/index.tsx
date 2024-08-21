@@ -1,9 +1,7 @@
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { Banner, Footer, Header, LogoB } from '../../components';
 import * as S from './styles';
 import avatar from '../../assets/avatar.png';
-import { Container } from '@mui/material';
 const Home = () => {
 
 
