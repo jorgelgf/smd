@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { Themes } from '../../themes/globalStyles';
 
 export const ButtonX = styled.div`
 cursor: pointer;
