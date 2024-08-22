@@ -17,6 +17,8 @@ import * as S from './styles';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Themes } from '../../themes/globalStyles';
 import logoW from '../../assets/logoW.png';
+import { useNavigate } from 'react-router-dom';
+
 interface Props {
   window?: () => Window;
 }
@@ -25,6 +27,7 @@ const drawerWidth = 240;
 const navItems = ['PRODUTOS', 'SOBRE', 'ORÇAMENTO'];
 
 export const Header = (props: Props) => {
+  const navigate = useNavigate();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -49,7 +52,7 @@ export const Header = (props: Props) => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center', color: `${Themes.colors.whiteColor}` }}>
-              <ListItemText primary={item} />
+              <ListItemText onClick={() => navigate(`/${item.toLowerCase()}`)} primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -89,7 +92,7 @@ export const Header = (props: Props) => {
 
             {navItems.map((item) => (
 
-              <Button key={item} sx={{ color: `${Themes.colors.whiteColor}` }}>
+              <Button onClick={() => navigate(`/${item.toLowerCase()}`)} key={item} sx={{ color: `${Themes.colors.whiteColor}` }}>
                 {item === 'ORÇAMENTO' ? ShowButtom() : item}
 
               </Button>

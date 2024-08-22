@@ -1,5 +1,5 @@
 
-import { Banner, Footer, Header, Loading, Logo } from '../../components';
+import { Banner, Header, Loading, Logo } from '../../components';
 import { Suspense, lazy } from 'react';
 import * as S from './styles';
 import logoB from '../../assets/logoB.png';
@@ -23,7 +23,6 @@ export const Home = () => {
 
         </Banner>
 
-        <Footer />
       </S.Container>
     </>
   )

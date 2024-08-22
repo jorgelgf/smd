@@ -3,9 +3,12 @@ import * as S from "./styles";
 
 
 export const ButtonWhatsApp = () => {
+  const handleClick = () => {
+    return alert("Calma que ainda vai funcionar :)")
+  }
   return (
     <S.Container>
-      <WhatsAppIcon style={{ fontSize: 'clamp(10px,8vw, 3rem)' }} />
+      <WhatsAppIcon onClick={handleClick} style={{ fontSize: 'clamp(10px,8vw, 3rem)' }} />
     </S.Container>
   )
 }

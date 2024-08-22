@@ -1,6 +1,7 @@
 import * as S from './styles';
 
 import viar from '../../assets/viar.png';
+import { XCarousel } from '../carrousel';
 
 
 const Start = () => {

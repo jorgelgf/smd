@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 interface LogoProps {
-    logo: string
+    logo: string;
 }
 
 export const Logo = ({ logo }: LogoProps) => {
