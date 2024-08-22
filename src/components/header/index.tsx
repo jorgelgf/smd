@@ -18,17 +18,13 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { Themes } from '../../themes/globalStyles';
 import logoW from '../../assets/logoW.png';
 interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
   window?: () => Window;
 }
 
 const drawerWidth = 240;
 const navItems = ['PRODUTOS', 'SOBRE', 'ORÇAMENTO'];
 
-export default function Header(props: Props) {
+export const Header = (props: Props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -47,6 +43,7 @@ export default function Header(props: Props) {
       <Typography variant="h2" sx={{ my: 2 }}>
         <S.ImgLogoSand src={logoW} alt='logo' />
       </Typography>
+
       <Divider />
       <List >
         {navItems.map((item) => (
@@ -78,6 +75,7 @@ export default function Header(props: Props) {
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
+
           </IconButton>
           <Typography
             variant="h6"
@@ -86,7 +84,9 @@ export default function Header(props: Props) {
           >
             <S.ImgLogoSand src={logoW} alt='logo' />
           </Typography>
+
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+
             {navItems.map((item) => (
 
               <Button key={item} sx={{ color: `${Themes.colors.whiteColor}` }}>
@@ -99,6 +99,7 @@ export default function Header(props: Props) {
         </Toolbar>
 
       </AppBar>
+
       <nav>
         <Drawer
           container={container}

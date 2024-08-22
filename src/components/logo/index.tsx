@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '../../assets/logoB.png';
 import styled from 'styled-components';
-
-const LogoB = () => {
-    return <Img src={logo} alt='imagem-logo-black' />
+interface LogoProps {
+    logo: string
 }
 
-export default LogoB;
+export const Logo = ({ logo }: LogoProps) => {
+    return <Img src={logo} alt='imagem-logo-black' />
+}
 const Img = styled.img`
 
 width: 300px;

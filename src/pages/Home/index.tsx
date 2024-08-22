@@ -1,30 +1,31 @@
 
-import { Banner, Footer, Header, LogoB } from '../../components';
+import { Banner, Footer, Header, Loading, Logo } from '../../components';
+import { Suspense, lazy } from 'react';
 import * as S from './styles';
+import logoB from '../../assets/logoB.png';
 import avatar from '../../assets/avatar.png';
-const Home = () => {
 
+export const Home = () => {
+  const Start = lazy(() => import("../../components/start"));
 
   return (
     <>
       <Header />
       <S.Container>
-
         <Banner >
           <S.BoxLeft>
-            <LogoB />
+            <Logo logo={logoB} />
             <img className='avatar' src={avatar} alt='avatar' />
           </S.BoxLeft>
-          <S.BoxRight>
-            <S.Midias>
-            </S.Midias>
-          </S.BoxRight>
-        </Banner>
-        <Footer />
+          <Suspense fallback={<Loading />}>
+            {<Start />}
+          </Suspense>
 
+        </Banner>
+
+        <Footer />
       </S.Container>
     </>
   )
 }
 
-export default Home;
