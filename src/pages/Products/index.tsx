@@ -5,10 +5,13 @@ import logoB from '../../assets/logoB.png'
 import * as S from './styles';
 import { Typography } from '@mui/material';
 import { Themes } from '../../themes/globalStyles';
-import { XCarousel } from '../../components';
+import { Footer, Header, XCarousel } from '../../components';
 export const Products = () => {
   return <>
+
     <S.Container>
+      <Header />
+
       <img className='imgLogo' src={logoB} alt="imagem logo" />
 
       <Typography
@@ -25,6 +28,6 @@ export const Products = () => {
 
 
     </S.Container>
-
+    <Footer />
   </>
 }

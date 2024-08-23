@@ -1,5 +1,5 @@
 
-import { Banner, Header, Loading, Logo } from '../../components';
+import { Banner, Footer, Header, Loading, Logo } from '../../components';
 import { Suspense, lazy } from 'react';
 import * as S from './styles';
 import logoB from '../../assets/logoB.png';
@@ -10,18 +10,18 @@ export const Home = () => {
 
   return (
     <>
-      <Header />
       <S.Container>
-        <Banner >
-          <S.BoxLeft>
-            <Logo logo={logoB} />
-            <img className='avatar' src={avatar} alt='avatar' />
-          </S.BoxLeft>
-          <Suspense fallback={<Loading />}>
+        <Header />
+        <Suspense fallback={<Loading />}>
+          <Banner >
+            <S.BoxLeft>
+              <Logo logo={logoB} />
+              <img className='avatar' src={avatar} alt='avatar' />
+            </S.BoxLeft>
             {<Start />}
-          </Suspense>
-
-        </Banner>
+          </Banner>
+        </Suspense>
+        <Footer />
 
       </S.Container>
     </>

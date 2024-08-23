@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import { Themes } from '../../themes/globalStyles';
 
 export const Container = styled.div`
-min-height: 100vh;
+height: 100vh;
 width: 100%;
 display: flex;
 flex-direction:column;
 align-items: center;
+
+
 `;
 
 
@@ -24,15 +26,17 @@ padding-right: 3rem;
   position: fixed;
   bottom:-150px;
   z-index: 2;
+
   
   @media(max-width:990px){
     max-width: 380px;
     position: relative;
     top:8px;
-  }
+      }
   
   @media(max-height:600px){
     z-index: 0;
+    
   }
 }
 
@@ -40,7 +44,14 @@ padding-right: 3rem;
   justify-content: center;
   padding-left: 0rem;
   padding-right: 0rem;
-  padding-top: 5rem;
+  padding-top: 8rem;
+
+}
+@media(max-height:670px){
+  justify-content: center;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 10rem;
 
 }
 `;

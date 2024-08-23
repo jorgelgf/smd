@@ -9,8 +9,20 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+padding-bottom: 2rem;
+
+transform: translateX(-20px);
+animation: animeLeft 0.4s forwards;
+
+    @keyframes animeLeft {
+      to {
+        opacity: 1;
+        transform: initial;
+    }
+  }
+
 .imgLogo{
-  padding-top:2rem;
+  padding-top:5rem;
   @media(max-width:990px){
   width: 300px;
 }

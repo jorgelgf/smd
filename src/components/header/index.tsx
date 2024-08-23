@@ -24,7 +24,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['PRODUTOS', 'SOBRE', 'ORÇAMENTO'];
+const navItems = ['HOME', 'PRODUTOS', 'SOBRE', 'ORÇAMENTO'];
 
 export const Header = (props: Props) => {
   const navigate = useNavigate();

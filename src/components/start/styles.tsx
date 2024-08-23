@@ -7,21 +7,29 @@ export const BoxRight = styled.div`
 
 background-color: ${Themes.colors.primaryColor};
 width: 100%;
-height: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: ${Themes.fontSize.xl};
-font-weight: 1000;
-color:${Themes.colors.whiteColor};
 flex-direction: column;
+padding-top: 3rem;
+border-radius: 25px 0 0 25px;
+box-shadow: 1px 1px 10px 1px black;
+  .mission{
+    width: 78%;
+    margin: 0;
+    padding:0; 
+}
 
 @media(max-width:990px){
-  border-radius:30px;
-  padding-bottom:3rem ;
+  border-radius:0;
+  padding-bottom:4rem ;
   max-height: 400px;
+  margin-bottom: 10rem;
+
   .mission{
-    width: 80%;
+    margin-top: 2rem;
+    width: 75%;
+    
   }
 
   }
