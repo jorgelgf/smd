@@ -7,26 +7,24 @@ width: 100%;
 display: flex;
 flex-direction:column;
 align-items: center;
-
-
 `;
-
 
 export const BoxLeft = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content:center;
-max-width: 400px;
+max-width: 700px;
 padding-left: 3rem;
 padding-right: 3rem;
 
+
+
 .avatar{
-  width: 600px;
+  width: 640px;
   position: fixed;
   bottom:-150px;
   z-index: 2;
-
   
   @media(max-width:990px){
     max-width: 380px;
@@ -36,29 +34,23 @@ padding-right: 3rem;
   
   @media(max-height:600px){
     z-index: 0;
-    
-  }
+   }
 }
 
-@media(max-width:990px){
+@media(max-width:940px){
   justify-content: center;
   padding-left: 0rem;
   padding-right: 0rem;
-  padding-top: 8rem;
-
-}
-@media(max-height:670px){
-  justify-content: center;
-  padding-left: 0rem;
-  padding-right: 0rem;
-  padding-top: 10rem;
-
+  padding-top: 15rem;
 }
 `;
 
-export const Midias = styled.div`
 
-color:${Themes.colors.whiteColor}
+export const BoxLogo = styled.div`
+
+@media(max-width:740px){
+  padding:0;
+}
 `;
 
 

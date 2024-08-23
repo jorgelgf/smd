@@ -11,9 +11,19 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-padding-top: 3rem;
+padding-top: 2rem;
 border-radius: 25px 0 0 25px;
 box-shadow: 1px 1px 10px 1px black;
+
+transform: translateX(-20px);
+animation: animeLeft 0.4s forwards;
+
+    @keyframes animeLeft {
+      to {
+        opacity: 1;
+        transform: initial;
+    }
+  }
   .mission{
     width: 78%;
     margin: 0;
@@ -22,12 +32,11 @@ box-shadow: 1px 1px 10px 1px black;
 
 @media(max-width:990px){
   border-radius:0;
-  padding-bottom:4rem ;
   max-height: 400px;
-  margin-bottom: 10rem;
-
+  margin-top: 0;
+  margin-bottom: 150px;
+    
   .mission{
-    margin-top: 2rem;
     width: 75%;
     
   }

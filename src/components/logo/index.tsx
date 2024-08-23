@@ -8,10 +8,11 @@ export const Logo = ({ logo }: LogoProps) => {
 }
 const Img = styled.img`
 
-width: 300px;
+width: 360px;
 margin-bottom: 300px;
 @media(max-width:990px){
     margin-bottom: 0;
+    width: 300px;
 
 }
 

@@ -22,4 +22,5 @@ z-index: 2;
 
 export const ImgLogoSand = styled.img`
 width:200px;
+cursor: pointer;
 `;

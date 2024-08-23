@@ -15,15 +15,16 @@ export const Home = () => {
         <Suspense fallback={<Loading />}>
           <Banner >
             <S.BoxLeft>
-              <Logo logo={logoB} />
+              <S.BoxLogo>
+                <Logo logo={logoB} />
+              </S.BoxLogo>
               <img className='avatar' src={avatar} alt='avatar' />
             </S.BoxLeft>
             {<Start />}
           </Banner>
         </Suspense>
         <Footer />
-
-      </S.Container>
+      </S.Container >
     </>
   )
 }

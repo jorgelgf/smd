@@ -33,7 +33,12 @@ export const Header = (props: Props) => {
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+
   };
+
+  const handleClick = () => {
+    return console.log('clicou')
+  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{
@@ -43,9 +48,11 @@ export const Header = (props: Props) => {
       textAlign: 'center',
       backgroundColor: `${Themes.colors.primaryColor}`
     }}>
-      <Typography variant="h2" sx={{ my: 2 }}>
-        <S.ImgLogoSand src={logoW} alt='logo' />
-      </Typography>
+
+      <S.ImgLogoSand src={logoW} alt='logo' />
+
+
+
 
       <Divider />
       <List >
@@ -85,9 +92,10 @@ export const Header = (props: Props) => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            <S.ImgLogoSand src={logoW} alt='logo' />
-          </Typography>
 
+            <S.ImgLogoSand onClick={() => navigate('/home')} src={logoW} alt='logo' />
+
+          </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
 
             {navItems.map((item) => (

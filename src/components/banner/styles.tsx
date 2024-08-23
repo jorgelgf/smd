@@ -7,7 +7,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-
 @media(max-width:990px){
   flex-direction: column;
   width: auto;
