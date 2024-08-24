@@ -11,23 +11,27 @@ export const Products = () => {
 
     <S.Container>
       <Header />
-
       <img className='imgLogo' src={logoB} alt="imagem logo" />
-
       <Typography
-        paddingTop={'2rem'}
-
-        color={Themes.colors.grayColor} variant="h6">Materiais em nossas redes</Typography>
+        paddingTop={'3rem'}
+        color={Themes.colors.grayColor}
+        variant="h6">Materiais em nossas redes
+      </Typography>
       <S.BoxImages>
         <S.BoxNet>
           <CustomImageList />
         </S.BoxNet>
       </S.BoxImages>
-      <Typography paddingTop={'2rem'} color={Themes.colors.grayColor} variant="h6">Banners</Typography>
-      <XCarousel />
-
-
+      <Typography
+        marginBottom={2}
+        paddingTop={'3rem'}
+        color={Themes.colors.grayColor}
+        variant="h6">Promoções
+      </Typography>
+      <S.BoxCarousel>
+        <XCarousel />
+      </S.BoxCarousel>
+      <Footer />
     </S.Container>
-    <Footer />
   </>
 }

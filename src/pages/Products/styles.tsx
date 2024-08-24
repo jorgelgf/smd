@@ -39,7 +39,6 @@ flex-direction: column;
 @media(max-width:990px){
   margin-top: 1rem;
   width: 90%;
-  border:solid ${Themes.colors.grayColor} .3px;
   border-radius: 15px;
   }
 `;
@@ -53,10 +52,9 @@ padding-right: 1rem;
 `;
 
 export const BoxCarousel = styled.div`
-border:solid;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 90%;
-padding:1rem;
+margin-bottom: 4rem;
 `;

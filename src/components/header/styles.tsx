@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const ButtonX = styled.div`
+export const ButtonX = styled.a`
 cursor: pointer;
 padding: .5rem 1rem;
 border-radius: 5px;
@@ -13,6 +13,7 @@ background-color: #0fb60f;
 color: white;
 font-weight: 600;
 transition: ease-in-out .2s;
+text-decoration: none;
 z-index: 2;
 
 &:hover {

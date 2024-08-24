@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
+
+`;
+
+export const Link = styled.a`
 background-color: #0fb60f;
 position: fixed;
 cursor: pointer;
@@ -20,4 +24,6 @@ opacity: .7;
 :hover{
   opacity: 1;
 }
+  margin-top: 100px;
+  text-decoration: none;
 `;

@@ -25,6 +25,8 @@ interface Props {
 
 const drawerWidth = 240;
 const navItems = ['HOME', 'PRODUTOS', 'SOBRE', 'ORÇAMENTO'];
+const info = 'Olá! Gostaria de fazer um orçamento contigo.'
+
 
 export const Header = (props: Props) => {
   const navigate = useNavigate();
@@ -56,7 +58,16 @@ export const Header = (props: Props) => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: 'center', color: `${Themes.colors.whiteColor}` }}>
-              <ListItemText onClick={() => navigate(`/${item.toLowerCase()}`)} primary={item} />
+              <ListItemText onClick={() => {
+                if (item !== "ORÇAMENTO") { navigate(`/${item.toLowerCase()}`) }
+                else {
+                  const link = document.createElement('a');
+                  link.href = 'https://wa.me/558496341546';
+                  link.target = '_blank';
+                  link.rel = 'noopener noreferrer';
+                  link.click();
+                }
+              }} primary={item} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -64,7 +75,9 @@ export const Header = (props: Props) => {
     </Box>
   );
   const ShowButtom = () => {
-    return <S.ButtonX><WhatsAppIcon />ORÇAMENTO</S.ButtonX>
+
+
+    return <S.ButtonX href={`https://wa.me/558496341546?text=${info}`}><WhatsAppIcon />ORÇAMENTO</S.ButtonX>
   }
 
   const container = window !== undefined ? () => window().document.body : undefined;
@@ -97,7 +110,9 @@ export const Header = (props: Props) => {
 
             {navItems.map((item) => (
 
-              <Button onClick={() => navigate(`/${item.toLowerCase()}`)} key={item} sx={{ color: `${Themes.colors.whiteColor}` }}>
+              <Button onClick={() => {
+                item !== "ORÇAMENTO" && navigate(`/${item.toLowerCase()}`)
+              }} key={item} sx={{ color: `${Themes.colors.whiteColor}` }}>
                 {item === 'ORÇAMENTO' ? ShowButtom() : item}
 
               </Button>
