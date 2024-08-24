@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Themes } from '../../themes/globalStyles';
 
 export const Container = styled.div`
 background-color:white;
