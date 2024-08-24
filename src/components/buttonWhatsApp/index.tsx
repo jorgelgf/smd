@@ -6,7 +6,7 @@ export const ButtonWhatsApp = () => {
 
   const info = 'Olá! Gostaria de fazer um orçamento contigo.'
   return (
-    <S.Link href={`https://wa.me/558496341546?text=${info}`}>
+    <S.Link href={`https://wa.me/558491899525?text=${info}`}>
       <WhatsAppIcon style={{ fontSize: 'clamp(10px,8vw, 3rem)' }} />
     </S.Link>
 

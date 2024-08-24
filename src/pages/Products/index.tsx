@@ -5,12 +5,11 @@ import logoB from '../../assets/logoB.png'
 import * as S from './styles';
 import { Typography } from '@mui/material';
 import { Themes } from '../../themes/globalStyles';
-import { Footer, Header, XCarousel } from '../../components';
+import { Footer, XCarousel } from '../../components';
 export const Products = () => {
   return <>
 
     <S.Container>
-      <Header />
       <img className='imgLogo' src={logoB} alt="imagem logo" />
       <Typography
         paddingTop={'3rem'}

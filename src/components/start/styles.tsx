@@ -8,11 +8,10 @@ export const BoxRight = styled.div`
 background-color: ${Themes.colors.primaryColor};
 width: 100%;
 display: flex;
+height: 100%;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-padding-top: 2rem;
-border-radius: 25px 0 0 25px;
 box-shadow: 1px 1px 10px 1px black;
 
 transform: translateX(-20px);
@@ -25,9 +24,9 @@ animation: animeLeft 0.4s forwards;
     }
   }
   .mission{
-    width: 78%;
+    width: 40%;
     margin: 0;
-    padding:0; 
+
 }
 
 @media(max-width:990px){
@@ -37,7 +36,9 @@ animation: animeLeft 0.4s forwards;
   margin-bottom: 150px;
     
   .mission{
-    width: 75%;
+    width: 65%;
+    padding-bottom:1.5rem; 
+    padding-top: 1rem;
     
   }
 
