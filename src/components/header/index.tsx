@@ -36,9 +36,6 @@ export const Header = (props: Props) => {
 
   };
 
-  const handleClick = () => {
-    return console.log('clicou')
-  }
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{
